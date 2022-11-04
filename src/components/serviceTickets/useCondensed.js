@@ -6,7 +6,8 @@ export const useCondensed = ({ limit, field }) => {
 
     useEffect(() => {
         const withEllipses = original.map(t => {
-            const copy = structuredClone(t)
+
+            const copy = {...t}
 
             copy.condensed = false
             copy.canCondense = false
